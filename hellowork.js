@@ -6,7 +6,7 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname+'/public'));
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 
 var fortunes=["Conquer your fear or they will conquer you.",

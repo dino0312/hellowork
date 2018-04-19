@@ -1,5 +1,5 @@
 {
-  "name": "hello",
+  "name": "Hello Work",
   "version": "1.0.0",
   "description": "Hello World",
   "main": "hellowork.js",
@@ -15,7 +15,7 @@
     "npm": "^5.8.0"
   },
   "engines": {
-    "npm": "5.7.1"
+    "npm": "^5.8.0"
   },
   "repository": {
   "type": "git",
