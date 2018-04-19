@@ -11,9 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "express3-handlebars": "^0.5.2"
+    "express3-handlebars": "^0.5.2",
+    "npm": "^5.8.0"
   },
   "engines": {
     "npm": "5.7.1"
-  }
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://git.heroku.com/warm-plateau-45867.git"
+}
 }
