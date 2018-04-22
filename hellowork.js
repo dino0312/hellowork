@@ -1,3 +1,4 @@
+
 var express = require('express');
 var app = express();
 
@@ -6,24 +7,19 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname+'/public'));
 
+var fortune = require('./lib/fortune.js');
+
 var port = process.env.PORT || 3000;
-
-
-var fortunes=["Conquer your fear or they will conquer you.",
-"Rivers need springs.",
-"Do not fear what you don't know.",
-"You will have a pleasant surprise.",
-"Whenever possible, keep it simple.",];
 
 app.get('/', function (req, res) {
   // res.send('Dinosaur Home!!');
   res.render('home');
+
 });
 
 app.get('/about', function (req, res) {
   // res.send('Dinosaur Home!!');
-  var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-  res.render('about', {fortune:randomFortune});
+  res.render('about', {fortune:fortune.getFortune()});
 });
 
 app.get('/doc', (req, res) => {
@@ -46,5 +42,5 @@ app.use(function (err, req, res, next) {
 });
 
 app.listen(port, function () {
-  console.log('Example app listening on port 443!');
+  console.log('Example app listening on port ' + port );
 });
