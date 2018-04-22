@@ -22,6 +22,7 @@
     "url": "https://git.heroku.com/warm-plateau-45867.git"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "mocha": "^5.1.1"
   }
 }
